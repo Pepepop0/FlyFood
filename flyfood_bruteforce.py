@@ -1,6 +1,7 @@
 
 def calculate_distance(point1, point2):
-    return ((point2[0] - point1[0])**2 + (point2[1] - point1[1])**2) ** 0.5
+    return abs(point2[0] - point1[0]) + abs(point2[1] - point1[1])
+
 
 def create_distance_matrix(points):
     matrix = []
@@ -51,5 +52,3 @@ print(f"6 pontos de entrega: rota = {route}, distância = {distance}")
 points_8 = [(1, 1), (1, 2), (2, 1), (2, 2), (1, 3), (2, 3), (3, 1), (3, 2)]
 route, distance = brute_force_tsp(points_8)
 print(f"8 pontos de entrega: rota = {route}, distância = {distance}")
-
-
